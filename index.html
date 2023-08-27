@@ -21,7 +21,7 @@ border-color: white;
     <h1>Open Links in New Tabs</h1>
     <form id="linkForm">
         <label for="linkList">Paste your list of links:</label>
-        <textarea id="linkList" rows="4" cols="50" style="width:800px;"></textarea><br>
+        <textarea id="linkList" rows="4" cols="50" style="width:800px; font-size: 14px;"></textarea><br>
         <label for="httpCheckbox">Include https </label>
         <input type="checkbox" id="httpCheckbox" checked><br>
         <label for="noNumberCheckbox">Links without numbers </label>
@@ -29,7 +29,8 @@ border-color: white;
         <button type="submit">Submit</button>
     </form>
     <br><hr>
-    <textarea id="outputLinkList" style="height: 1000px; width: 80%;" rows="4" cols="50"></textarea>
+    <textarea id="outputLinkList" style="height: 500px; width: 70%; font-size: 14px;" rows="4" cols="50"></textarea>
+    <textarea style="height: 1000px; width: 70%; font-size: 14px;" rows="4" cols="50"></textarea>
     <script>
         document.getElementById("linkForm").addEventListener("submit", function(event) {
             event.preventDefault();
