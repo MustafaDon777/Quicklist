@@ -35,7 +35,7 @@ border-color: white;
             event.preventDefault();
             
             var linkList = document.getElementById("linkList").value;
-            var links = linkList.split('\n').map(link => link.trim());
+            var links = linkList.replace(/\s+/g, '\n').split('\n').map(link => link.trim());
 
             var useHttp = document.getElementById("httpCheckbox").checked;
             var includeNoNumber = document.getElementById("noNumberCheckbox").checked;
