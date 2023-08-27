@@ -4,24 +4,24 @@
     <title>Open Links in New Tabs</title>
 </head>
 <style>
-*{
-background-color: #223054;
-color: white;
-margin:10px;
-font-family: Arial;
+* {
+    background-color: #223054;
+    color: white;
+    margin: 10px;
+    font-family: Arial;
 }
-button{
-background-color: #00AAFF66;
-padding: 10px;
-border-radius: 20px;
-border-color: white;
+button {
+    background-color: #00AAFF66;
+    padding: 10px;
+    border-radius: 20px;
+    border-color: white;
 }
 </style>
 <body>
     <h1>Open Links in New Tabs</h1>
     <form id="linkForm">
         <label for="linkList">Paste your list of links:</label>
-        <textarea id="linkList" rows="4" cols="50" style="width:600px;"></textarea><br>
+        <textarea id="linkList" rows="4" cols="50" style="width:800px;"></textarea><br>
         <label for="httpCheckbox">Include https </label>
         <input type="checkbox" id="httpCheckbox" checked><br>
         <label for="noNumberCheckbox">Links without numbers </label>
@@ -29,13 +29,13 @@ border-color: white;
         <button type="submit">Submit</button>
     </form>
     <br><hr>
-    <textarea id="outputLinkList" style="height: 1000px; width: 80%;" rows="4" cols="50"></textarea>
+    <textarea id="outputLinkList" style="height: 1000px; width: 80%;" rows="4" cols="50" readonly></textarea>
     <script>
         document.getElementById("linkForm").addEventListener("submit", function(event) {
             event.preventDefault();
             
             var linkList = document.getElementById("linkList").value;
-            var links = linkList.split('\n').map(link => link.trim().replace(/\s/g, '')); // Remove spaces
+            var links = linkList.split('\n').map(link => link.trim());
 
             var useHttp = document.getElementById("httpCheckbox").checked;
             var includeNoNumber = document.getElementById("noNumberCheckbox").checked;
